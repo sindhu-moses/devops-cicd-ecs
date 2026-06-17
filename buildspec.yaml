@@ -2,10 +2,11 @@ version: 0.2
 
 phases:
   install:
-    commands:
-      - RUN npm install
+    runtime-versions:
+      nodejs: 20  
   pre_build:
     commands:
+      - npm install
       - echo Logging in to Amazon ECR...
       - aws --version
       - AWS_DEFAULT_REGION=ap-south-1
