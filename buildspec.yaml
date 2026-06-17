@@ -3,8 +3,6 @@ version: 0.2
 phases:
   install:
     commands:
-      - WORKDIR /app
-      - COPY package*.json ./
       - RUN npm install
   pre_build:
     commands:
